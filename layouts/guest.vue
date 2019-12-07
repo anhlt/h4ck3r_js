@@ -58,7 +58,7 @@ export default {
     return {
       items: [
         {
-          title: 'Home2',
+          title: 'Home',
           icon: 'home',
           to: { name: 'index' }
         },
@@ -66,11 +66,6 @@ export default {
           title: 'Inspire',
           icon: 'lightbulb',
           to: { name: 'inspire' }
-        },
-        {
-          title: 'SignUp',
-          icon: 'lightbulb',
-          to: { name: 'signup' }
         }
       ]
     }

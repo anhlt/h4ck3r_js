@@ -23,6 +23,8 @@
         "./*"
       ]
     },
+    "experimentalDecorators": true,
+    "allowJs": true,
     "types": [
       "@types/node",
       "@nuxt/types"
