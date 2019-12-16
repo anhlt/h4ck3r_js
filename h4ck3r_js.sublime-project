@@ -13,9 +13,13 @@
 	{
 		"LSP":
 		{
+			"lsp-vue":
+			{
+				"enabled": true
+			},
 			"typescript-language-server":
 			{
-				"enabled": false
+				"enabled": true
 			}
 		}
 	}

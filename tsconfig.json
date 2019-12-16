@@ -1,6 +1,7 @@
 // tsconfig.json
 {
-  "compilerOptions": {
+  "compilerOptions":
+  {
     "target": "esnext",
     "module": "esnext",
     "moduleResolution": "node",
@@ -15,7 +16,8 @@
     "strict": true,
     "noEmit": true,
     "baseUrl": ".",
-    "paths": {
+    "paths":
+    {
       "~/*": [
         "./*"
       ],
@@ -27,7 +29,10 @@
     "allowJs": true,
     "types": [
       "@types/node",
-      "@nuxt/types"
+      "@nuxt/types",
+      "@types/nuxtjs__auth",
+      "@nuxtjs/axios", // From Axios setup: https://axios.nuxtjs.org/setup#typescript-setup
+      "@nuxtjs/auth" // Add
     ]
   },
   "exclude": [
