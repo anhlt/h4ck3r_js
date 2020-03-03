@@ -3,7 +3,7 @@ import Vue from 'vue'
 import Component from 'vue-class-component'
 import users from '~/store/user'
 import { Dictionary } from 'vue-router/types/router'
-import { UserInfo } from '~/store/interfaces'
+import { UserInfo } from '~/store/types'
 
 
 const AppProps = Vue.extend({
@@ -14,11 +14,8 @@ const AppProps = Vue.extend({
     }
 })
 
-@Component({
-    middleware: ['auth'],
-
-})
-export default class Login extends AppProps {
+@Component({})
+export default class UserRegisterForm extends AppProps {
     isLoading: boolean = false
     isFullPage: boolean = true
 
@@ -26,9 +23,5 @@ export default class Login extends AppProps {
         email: '',
         password: '',
         rememberMe: true
-
     }
-
-
-
 }

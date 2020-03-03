@@ -19,9 +19,11 @@
     "@nuxtjs/axios": "^5.8.0",
     "@nuxtjs/dotenv": "^1.4.0",
     "@nuxtjs/pwa": "^3.0.0-0",
+    "inversify": "^5.0.1",
     "nuxt": "^2.5.0",
     "nuxt-buefy": "^0.3.2",
     "nuxt-property-decorator": "^2.5.0",
+    "reflect-metadata": "^0.1.13",
     "vue-class-component": "^7.1.0"
   },
   "devDependencies": {

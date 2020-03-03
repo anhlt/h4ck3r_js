@@ -32,5 +32,5 @@
     </template>
   </b-navbar>
 </template>
-<script lang="ts" src="./navbar.ts">
+<script lang="ts" src="./NavBar.ts">
 </script>

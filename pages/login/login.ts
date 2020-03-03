@@ -2,8 +2,8 @@ import Vue from 'vue'
 import Component from 'vue-class-component'
 import users from '~/store/user'
 
-import LoginForm from '~/components/LoginForm'
-import {UserInfo} from '~/store/interfaces'
+import LoginForm from '~/components/login_form/LoginForm'
+import { UserInfo } from '~/store/types'
 
 @Component({
   layout: 'guest',

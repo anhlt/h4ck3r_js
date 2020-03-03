@@ -22,7 +22,7 @@
 </template>
 <script>
 
-import NavBar from '~/components/NavBar'
+import NavBar from '~/components/navigation_bar/NavBar'
 
 export default {
 

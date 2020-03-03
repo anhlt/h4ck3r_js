@@ -1,4 +1,5 @@
-import { Module, VuexModule, Mutation } from 'vuex-module-decorators'
+import { Module, VuexModule, Mutation, Action } from 'vuex-module-decorators'
+import { UserInfo } from '~/store/types'
 
 @Module({
   name: 'user',
@@ -6,14 +7,29 @@ import { Module, VuexModule, Mutation } from 'vuex-module-decorators'
   namespaced: true,
 })
 export default class User extends VuexModule {
-  wheels = 2
+
+  userInfo?: UserInfo
 
   @Mutation
-  incrWheels(extra: number) {
-    this.wheels += extra
+  setUserInfo(userInfo: UserInfo) {
+    this.userInfo = userInfo
   }
 
-  get axles() {
-    return this.wheels / 2
+  get loggedIn(): boolean {
+    if (this.userInfo) {
+      return true
+    } else {
+      return false
+    }
   }
+
+  get user(): UserInfo | undefined {
+    return this.userInfo
+  }
+
+  @Action
+  loggin() {
+
+  }
+
 }
