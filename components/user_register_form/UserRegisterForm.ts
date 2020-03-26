@@ -3,25 +3,22 @@ import Vue from 'vue'
 import Component from 'vue-class-component'
 import users from '~/store/user'
 import { Dictionary } from 'vue-router/types/router'
-import { UserInfo } from '~/store/types'
+import { UserRegisterInfo } from '~/store/types'
 
-
-const AppProps = Vue.extend({
-    props: {
-        submitForm: {
-            type: Function as () => any
-        }
-    }
-})
 
 @Component({})
-export default class UserRegisterForm extends AppProps {
+export default class UserRegisterForm extends Vue {
     isLoading: boolean = false
     isFullPage: boolean = true
 
-    userInfo: UserInfo = {
+    userRegisterInfo: UserRegisterInfo = {
         email: '',
         password: '',
-        rememberMe: true
+        username: '',
+        name: ''
+    }
+
+    private submit(): void {
+        this.$emit("submited", this.userRegisterInfo);
     }
 }

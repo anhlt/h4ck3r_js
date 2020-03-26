@@ -25,7 +25,9 @@ export default {
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: [],
+  plugins: [
+    '@/plugins/container_plugin.ts'
+  ],
   /*
    ** Nuxt.js dev-modules
    */
@@ -81,6 +83,13 @@ export default {
       target: 'http://localhost:9000',
       pathRewrite: {
         '^/api/user': 'http://localhost:9000/api/user'
+      },
+      logLevel: 'debug'
+    },
+    '/api/user_register': {
+      target: 'http://localhost:9000',
+      pathRewrite: {
+        '^/api/user_register': 'http://localhost:9000/user_register'
       },
       logLevel: 'debug'
     }

@@ -1,6 +1,6 @@
 <template>
   <section class="section">
-    <UserRegisterForm></UserRegisterForm>
+    <UserRegisterForm @submited="submitForm"></UserRegisterForm>
   </section>
 </template>
 

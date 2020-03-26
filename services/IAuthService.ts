@@ -1,6 +1,6 @@
-import { UserInfo } from "~/store/types";
+import { UserInfo , UserRegisterInfo} from "~/store/types";
 
 
 export default interface IAuthService {
-  registerUser(userInfo: UserInfo): Promise<void>
+  registerUser(userRegisterInfo: UserRegisterInfo): Promise<void>
 }
