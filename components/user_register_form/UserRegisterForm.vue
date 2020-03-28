@@ -2,7 +2,7 @@
   <div class="columns is-mobile">
     <section>
       <b-field label="Name">
-        <b-input v-model="userRegisterInfo.name"></b-input>
+        <b-input v-model="userRegisterInfo.nickname"></b-input>
       </b-field>
       <b-field label="Email">
         <b-input type="email" v-model="userRegisterInfo.email" maxlength="30">

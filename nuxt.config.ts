@@ -60,6 +60,7 @@ export default {
    */
   axios: {
     debug: true,
+    proxy: true
   },
   /*
    ** Build configuration
@@ -79,18 +80,9 @@ export default {
       },
       logLevel: 'debug'
     },
-    '/api/user': {
+    '/api/': {
       target: 'http://localhost:9000',
-      pathRewrite: {
-        '^/api/user': 'http://localhost:9000/api/user'
-      },
-      logLevel: 'debug'
-    },
-    '/api/user_register': {
-      target: 'http://localhost:9000',
-      pathRewrite: {
-        '^/api/user_register': 'http://localhost:9000/user_register'
-      },
+      pathRewrite: { '^/api/': '/' },
       logLevel: 'debug'
     }
   },

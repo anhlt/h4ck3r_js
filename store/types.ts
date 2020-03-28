@@ -6,7 +6,7 @@ export interface UserInfo {
 }
 
 export interface UserRegisterInfo {
-    name?: string,
+    nickname?: string,
     email?: string,
     username?: string,
     password?: string

@@ -15,7 +15,7 @@ export default class UserRegisterForm extends Vue {
         email: '',
         password: '',
         username: '',
-        name: ''
+        nickname: ''
     }
 
     private submit(): void {
