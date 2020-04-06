@@ -32,7 +32,8 @@
       "@nuxt/types",
       "@types/nuxtjs__auth",
       "@nuxtjs/axios", // From Axios setup: https://axios.nuxtjs.org/setup#typescript-setup
-      "@nuxtjs/auth" // Add
+      "@nuxtjs/auth", // Add
+      "buefy/types"
     ]
   },
   "exclude": [

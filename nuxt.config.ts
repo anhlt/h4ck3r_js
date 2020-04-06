@@ -1,5 +1,7 @@
 export default {
   mode: 'spa',
+  debug: true,
+
   /*
    ** Headers of the page
    */
@@ -66,23 +68,11 @@ export default {
    ** Build configuration
    */
   proxy: {
-    '/signIn': {
+    '/api': {
       target: 'http://localhost:9000',
       pathRewrite: {
-        '^/signIn': 'http://localhost:9000/signIn'
+        '^/api': '/api'
       },
-      logLevel: 'debug'
-    },
-    '/signOut': {
-      target: 'http://localhost:9000',
-      pathRewrite: {
-        '^/signOut': 'http://localhost:9000/signOut'
-      },
-      logLevel: 'debug'
-    },
-    '/api/': {
-      target: 'http://localhost:9000',
-      pathRewrite: { '^/api/': '/' },
       logLevel: 'debug'
     }
   },
@@ -90,15 +80,21 @@ export default {
     strategies: {
       local: {
         endpoints: {
-          login: { url: '/signIn', method: 'post', propertyName: 'token' },
-          logout: { url: '/signOut', method: 'post' },
-          user: { url: '/api/user', method: 'get', propertyName: 'data' }
+          login: { url: '/api/v1/login', method: 'post', propertyName: 'token' },
+          logout: { url: '/api/v1/logout', method: 'post' },
+          user: { url: '/api/v1/user', method: 'get', propertyName: 'data' }
         },
         tokenRequired: true,
         tokenType: '',
         globalToken: true,
         tokenName: 'X-Auth-Token'
       }
+    },
+    redirect: {
+      login: '/login',
+      logout: '/login',
+      callback: '/login',
+      home: '/'
     }
   },
 

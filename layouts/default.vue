@@ -40,6 +40,11 @@ export default {
           title: 'Inspire',
           icon: 'lightbulb',
           to: { name: 'inspire' }
+        },
+        {
+          title: 'Authorize',
+          icon: 'lightbulb',
+          to: { name: 'authorize' }
         }
       ]
     }
