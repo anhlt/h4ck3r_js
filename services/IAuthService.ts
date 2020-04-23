@@ -13,7 +13,8 @@ export interface ClientData {
 
 export interface AuthorizationCodeData {
   data: {
-    code: string
+    code: string,
+    redirectUri: string
   }
 }
 

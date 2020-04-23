@@ -41,11 +41,6 @@ export default {
           icon: 'lightbulb',
           to: { name: 'inspire' }
         },
-        {
-          title: 'Authorize',
-          icon: 'lightbulb',
-          to: { name: 'authorize' }
-        }
       ]
     }
   }

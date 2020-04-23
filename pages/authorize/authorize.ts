@@ -48,8 +48,10 @@ export default class Authorize extends Vue {
         confirmText: 'Agree',
         type: 'is-success',
         onConfirm: () => {
-          this.issueAuthorizationCode().then(() => {
+          this.issueAuthorizationCode().then((result) => {
+            console.log(result.data.redirectUri)
             this.$buefy.toast.open('User agreed')
+            window.location.href = result.data.redirectUri
           })
         }
       })
