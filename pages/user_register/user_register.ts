@@ -1,5 +1,4 @@
-import Vue from 'vue'
-import Component from 'vue-class-component'
+import { Vue, Component, Prop } from 'vue-property-decorator'
 import users from '~/store/user'
 import { getModule } from "vuex-module-decorators"
 import UserRegisterForm from '~/components/user_register_form/UserRegisterForm'
